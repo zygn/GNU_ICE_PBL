@@ -1,7 +1,7 @@
 import urllib.request, re
 
-url = 'http://www.kma.go.kr/wid/'\
-      'queryDFSRSS.jsp?zone=4822034000'
+# url = 'http://www.kma.go.kr/wid/'\
+#       'queryDFSRSS.jsp?zone=4822034000'
 
 def weather(url):
       ufile = urllib.request.urlopen(url)
@@ -38,5 +38,5 @@ def weather(url):
 
       return res
 
-w = weather(url)
-print(w)
+# w = weather(url)
+# print(w)
