@@ -9,13 +9,13 @@ class WeatherSystem:
             self.weightTop = 90 
 
 
-            self.hood = [20,30, "hood"]
-            self.jean = [0,50, "jean"]
-            self.longT = [30,50, "longT"]
-            self.padding = [0,6, "padding"]
-            self.shortbottom = [50,90, "shortbottom"]
-            self.shortT = [50,90, "shortT"]
-            self.slacks = [30,50, "slacks"]
+            self.hood = [20,40, "hood"]
+            self.jean = [0,46, "jean"]
+            self.longT = [40,46, "longT"]
+            self.padding = [0,10, "padding"]
+            self.shortbottom = [46,90, "shortbottom"]
+            self.shortT = [46,90, "shortT"]
+            self.slacks = [0,46, "slacks"]
       
 
       def weatherStateFounder(self):
@@ -92,7 +92,7 @@ class WeatherSystem:
             hatRandomize = random.randint(0,1)
             if hatRandomize == 0:
                   pass
-            else: res.append("HAT") 
+            else: res.append("hat") 
             
             arr = [self.hood, self.jean, self.longT, self.padding, self.shortbottom, self.shortT, self.slacks]
             for i in arr:

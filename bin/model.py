@@ -50,7 +50,6 @@ def modelReturn(img, model):
     #print(label[k])
     return label[k]
 
-def findPicture(prefix, img):
-    
+
 
 #print(modelReturn("C:/Users/Yundo/Documents/GitHub/GNU_ICE_PBL/SampleCase/01.jpg", "C:/Users/Yundo/Documents/GitHub/GNU_ICE_PBL/SampleCase/50md.h5"))
