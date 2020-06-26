@@ -1,17 +1,14 @@
-import KMA_XML.xml_parser as kma
-import Model.model as md
 
-globSeason = None
+import bin.weather as we
+import bin.model as mod 
 
-url = 'http://www.kma.go.kr/wid/'\
-      'queryDFSRSS.jsp?zone=4822034000'
-tempdir = "C:/Users/Yundo/Documents/GitHub/GNU_ICE_PBL/SampleCase/"
+url = "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=4822034000"
 
-loc = kma.weather(url)
-model = md.modelReturn(tempdir+"01.jpg",tempdir+"md.h5")
-print(loc, model)
+modelDic = "C:/Users/Yundo/Documents/GitHub/GNU_ICE_PBL/SampleCase/50md.h5"
+imgDic = "C:/Users/Yundo/Documents/GitHub/GNU_ICE_PBL/SampleCase/01.jpg"
 
-if float(loc['airtemp']) > 25.0 and loc['weatherstate'] == "맑음":
-    globSeason = "SUMMER"
+b = we.WeatherSystem(url)
+print(b.decideCloth())
 
-print(globSeason)
+m = mod.modelReturn()
+print(m)
