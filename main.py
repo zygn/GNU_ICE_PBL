@@ -5,7 +5,7 @@ from PIL import Image
 
 url = "http://www.kma.go.kr/wid/queryDFSRSS.jsp?zone=4822034000"
 
-imgDic = "./Sample/Image"
+imgDic = "./sample/Image"
 
 def findPicture(prefix, img):
     # print("AFTER", prefix)
