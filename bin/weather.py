@@ -39,7 +39,7 @@ class WeatherSystem:
 
 
       def seasonFounder(self):
-            if self.data['airtemp'] >= 25.0:
+            if self.data['airtemp'] > 22.0:
                   self.weight += self.data['airtemp'] * 2.0 # SUMMER
 
             elif self.data['airtemp'] <= 5.0:  # WINTER
@@ -47,8 +47,8 @@ class WeatherSystem:
                   else: wb = self.data['airtemp'] * 2.0
                   self.weight += wb
                  
-            elif self.data['airtemp'] >= 5.0 and self.data['airtemp'] <= 25.0: # SPRING AND FALL
-                  self.weight += self.data['airtemp'] * 2.0 
+            elif self.data['airtemp'] >= 5.0 and self.data['airtemp'] <= 22.0: # SPRING AND FALL
+                  self.weight += self.data['airtemp'] * 1.5 
 
 
       def takeWeather(self):

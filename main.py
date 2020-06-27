@@ -21,22 +21,27 @@ def findPicture(prefix, img):
 
     result = []
 
+    splitParam = "/"
+    # if OS POSIX: "/"
+    # if OS NT Kernel: "\\"
+
     for filename in glob.iglob('{}/**/*.jpg'.format(img), recursive=True):
-        if filename[len(img)+1:].split("\\")[0] == "hat":
+
+        if filename[len(img)+1:].split(splitParam)[0] == "hat":
             hat.append(filename)
-        elif filename[len(img)+1:].split("\\")[0] == "hood":
+        elif filename[len(img)+1:].split(splitParam)[0] == "hood":
             hood.append(filename)
-        elif filename[len(img)+1:].split("\\")[0] == "jean":
+        elif filename[len(img)+1:].split(splitParam)[0] == "jean":
             jean.append(filename)
-        elif filename[len(img)+1:].split("\\")[0] == "longT":
+        elif filename[len(img)+1:].split(splitParam)[0] == "longT":
             longT.append(filename)
-        elif filename[len(img)+1:].split("\\")[0] == "padding":
+        elif filename[len(img)+1:].split(splitParam)[0] == "padding":
             padding.append(filename)
-        elif filename[len(img)+1:].split("\\")[0] == "shortbottom":
+        elif filename[len(img)+1:].split(splitParam)[0] == "shortbottom":
             shortbottom.append(filename)
-        elif filename[len(img)+1:].split("\\")[0] == "shortT":
+        elif filename[len(img)+1:].split(splitParam)[0] == "shortT":
             shortT.append(filename)
-        elif filename[len(img)+1:].split("\\")[0] == "slacks":
+        elif filename[len(img)+1:].split(splitParam)[0] == "slacks":
             slacks.append(filename)
 
     for i in prefix:
